@@ -1,0 +1,12 @@
+.card {
+  background-color: aquamarine;
+  display: inline-block;
+  padding: 1rem;
+  width: 15rem;
+}
+.card img {
+  width: 100%;
+}
+.availablity {
+  background-color: blue;
+}
