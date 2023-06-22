@@ -16,7 +16,12 @@ export class ListItemComponent implements OnInit {
         image: 'assets/images/cfc484acdc9d56e9961b6037d76314be.jpeg',
         availablity: true,
       },
-      { name: 'guts', price: 420, image: '', availablity: false },
+      {
+        name: 'guts',
+        price: 420,
+        image: 'assets/images/guts_175.webp',
+        availablity: false,
+      },
     ];
   }
 }
