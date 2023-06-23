@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemModel } from 'src/model/itemDataModel';
+import { ArticlesService } from 'src/services/articles.service';
 
 @Component({
   selector: 'app-list-item',
@@ -8,20 +9,10 @@ import { ItemModel } from 'src/model/itemDataModel';
 })
 export class ListItemComponent implements OnInit {
   items!: ItemModel[];
+
+  constructor(private articlesServices: ArticlesService) {}
+
   ngOnInit(): void {
-    this.items = [
-      {
-        name: 'beherit',
-        price: 42,
-        image: 'assets/images/cfc484acdc9d56e9961b6037d76314be.jpeg',
-        availablity: true,
-      },
-      {
-        name: 'guts',
-        price: 420,
-        image: 'assets/images/guts_175.webp',
-        availablity: false,
-      },
-    ];
+    this.items = this.articlesServices.getArticles();
   }
 }
